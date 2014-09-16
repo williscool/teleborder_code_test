@@ -1,9 +1,10 @@
-               Prefix Verb   URI Pattern                      Controller#Action
-     twitter_accounts POST   /twitter_accounts(.:format)      twitter_accounts#create
- new_twitter_accounts GET    /twitter_accounts/new(.:format)  twitter_accounts#new
-edit_twitter_accounts GET    /twitter_accounts/edit(.:format) twitter_accounts#edit
-                      GET    /twitter_accounts(.:format)      twitter_accounts#show
-                      PATCH  /twitter_accounts(.:format)      twitter_accounts#update
-                      PUT    /twitter_accounts(.:format)      twitter_accounts#update
-                      DELETE /twitter_accounts(.:format)      twitter_accounts#destroy
-                 root GET    /                                twitter_accounts#index
+                  Prefix Verb   URI Pattern                         Controller#Action
+        twitter_accounts POST   /twitter_accounts(.:format)         twitter_accounts#create
+    new_twitter_accounts GET    /twitter_accounts/new(.:format)     twitter_accounts#new
+   edit_twitter_accounts GET    /twitter_accounts/edit(.:format)    twitter_accounts#edit
+                         GET    /twitter_accounts(.:format)         twitter_accounts#show
+                         PATCH  /twitter_accounts(.:format)         twitter_accounts#update
+                         PUT    /twitter_accounts(.:format)         twitter_accounts#update
+                         DELETE /twitter_accounts(.:format)         twitter_accounts#destroy
+twitter_accounts_compare GET    /twitter_accounts/compare(.:format) twitter_accounts#compare
+                    root GET    /                                   twitter_accounts#index

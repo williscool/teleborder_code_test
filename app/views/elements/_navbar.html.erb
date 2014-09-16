@@ -13,6 +13,8 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="navbar-collapse-1">
     <ul class="nav navbar-nav">
+      <li><%= link_to "Display Tweets", root_path %></li>
+      <li><%= link_to "Compare Followers", twitter_accounts_compare_path  %></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <% if defined?(Devise) %>

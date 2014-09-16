@@ -1,0 +1,46 @@
+<div class="col-md-8">
+  
+  <%= form_tag({controller: "twitter_accounts", action: "compare"}, method: "get") do %>
+    <div class="col-md-5">
+      <div class="input-group">
+        <span class="input-group-addon">@</span>
+        <input type="text" name="first_account_name" class="form-control" value="<%= @first_account_name %>" placeholder="Username">
+      </div>
+    </div>
+
+    <div class="col-md-5">
+      <div class="input-group">
+        <span class="input-group-addon">@</span>
+        <input type="text" name="second_account_name" class="form-control" value="<%= @second_account_name %>" placeholder="Username">
+      </div>
+    </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+   <% end %>
+
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading"> Common Followers </div>
+
+  <% if @common_follower_ids.count > 0 %>
+    <div class="panel-body">
+      There were <%= @common_follower_ids.count %> total common followers. Here is a list of up to 30
+    </div>
+  <% else %>
+    <div class="panel-body">
+      There were no common followers.
+    </div>
+  <% end %>
+
+
+  <!-- List group -->
+  <ul class="list-group">
+   <% @common_followers.each do |follower_name_text| %>
+    <li class="list-group-item"> <%= follower_name_text %> </li>
+   <% end %>
+  </ul>
+
+</div>
+
+</div>
