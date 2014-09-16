@@ -1,2 +1,28 @@
-<h1>TwitterAccounts#index</h1>
-<p>Find me in app/views/twitter_accounts/index.html.erb</p>
+<div class="col-md-8">
+  
+  <%= form_tag({controller: "twitter_accounts", action: "index"}, method: "get") do %>
+    <div class="col-md-6">
+      <div class="input-group">
+        <span class="input-group-addon">@</span>
+        <input type="text" name="account_name" class="form-control" value="<%= @account_name %>" placeholder="Username">
+      </div>
+    </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+   <% end %>
+
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading"> Tweets </div>
+
+  <!-- List group -->
+  <ul class="list-group">
+   <% @tweets.each do |tweet| %>
+    <li class="list-group-item"> <%= tweet.full_text %> </li>
+   <% end %>
+  </ul>
+
+</div>
+
+</div>
